@@ -1,0 +1,7 @@
+reporting:
+  enabled: false
+  project-key: PROYECTKEY
+  send-logs: true
+  server:
+    hostname: SERVERHOSTNAME
+    access-token: ACCESSTOKEN
