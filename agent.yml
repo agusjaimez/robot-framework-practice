@@ -1,0 +1,7 @@
+reporting:
+  enabled: true
+  project-key: DEF
+  send-logs: true
+  server:
+    hostname: https://vd2.zebrunner.org
+    access-token: q05bWVEWweNQyb0BCm5sA1CfsHvxk74sxOf7DhPSW4ensONQSF

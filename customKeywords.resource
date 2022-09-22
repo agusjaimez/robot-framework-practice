@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    OperatingSystem
 
 *** Variables ***
 # Locators
@@ -8,17 +9,17 @@ ${UserNameField}    id:email
 ${PasswordField}    id:upass
 ${LogInButton}    id:nick-submit
 ${LogOutButton}    xpath://i[@class="head-icon icon-signout"]
-${remote_Url}    https://vd2:2HS729SnKHKTnV4j@engine.zebrunner.org/wd/hub
 ${desired}    Evaluate  {"enableVideo": True, "enableLog": True, "enableVNC": True, "provider": "zebrunner"}
 
 *** Keywords ***
 Setup
     [Arguments]    ${url}    ${browser}
-    Open Browser    ${url}    ${browser}    ...    ${remote_Url}    ${desired}
+    Open Browser    ${url}    ${browser}    ...    %{REMOTE_DRIVER_URL}    ${desired}
     Maximize Browser Window
 
 Log User
     [Arguments]    ${user}    ${password}
+    Wait Until Element Is Enabled    ${LoggedInIcon}
     Click Element    ${LoggedInIcon}
     Input Text    ${UserNameField}    ${user}
     Input Text    ${PasswordField}    ${password}

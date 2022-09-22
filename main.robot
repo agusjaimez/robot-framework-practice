@@ -8,12 +8,10 @@ Suite Teardown    Close Browser
 *** Variables ***
 ${url}    https://www.gsmarena.com/
 ${browser}    chrome
-${user}    test12@yopmail.com
-${password}    12345678
 
 *** Test Cases ***
 Test LogIn
-    Log User    ${user}    ${password}
+    Log User    %{USER}    %{PASSWORD}
     ${location}    Get Location
 
 Test LogOut
