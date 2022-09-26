@@ -5,3 +5,5 @@ reporting:
   server:
     hostname: SERVERHOSTNAME
     access-token: ACCESSTOKEN
+  run:
+    display-name: GSM Arena test LogIn/LogOut
